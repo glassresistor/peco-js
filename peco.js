@@ -22,6 +22,8 @@ var changeLinkTarget = function(text) {
     return $uglyText.html(); 
 }
 
+
+
 $(document).ready(function(){
     var uglyForm = $('#uglyForm');
     uglyForm.submit(function(e) {
@@ -47,7 +49,7 @@ $(document).ready(function(){
             "U.N.": "UN",
             //remove double space
             "&nbsp;": " ",
-            //remove spaces around mdashi
+            //remove spaces around mdash
 
         };
         var tagSubs = {
@@ -62,6 +64,6 @@ $(document).ready(function(){
             uglyText = stuffToStuff(k, v, uglyText);
         });
         uglyText = changeLinkTarget(uglyText);
-        $('#uglyText').val(style_html(uglyText));
+        $('#uglyText').val(uglyText);
     });
 });
